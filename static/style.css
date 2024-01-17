@@ -4,85 +4,74 @@ body {
 
 /* ヘッダーのスタイル */
 .header {
-    background-color: #f0f0f0; /* パネルの背景色 */
-    padding: 15px; /* パネルの内側の余白 */
-    border: 1px solid #ccc; /* パネルのボーダー */
-    border-radius: 5px; /* パネルの角の丸み */
-    display: flex; /* フレックスコンテナ */
-    justify-content: space-between; /* コンテンツを均等に配置 */
+    background-color: #f0f0f0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* スマートフォンでは縦に配置 */
     align-items: center; /* コンテンツを中央に配置 */
 }
 
 /* ソートボタンのスタイル */
 #sortButton {
-    background-color: #ccc; /* ボタンの背景色 */
-    color: #555; /* テキストの色 */
-    border: none; /* ボーダーなし */
-    padding: 10px 20px; /* ボタンの内側の余白 */
-    border-radius: 5px; /* ボタンの角の丸み */
-    cursor: pointer; /* ポインターの形状を指定 */
-    font-size: 14px; /* フォントサイズ */
-    font-weight: bold; /* フォントの太さ */
-    transition: background-color 0.3s ease; /* ホバー時のトランジション効果 */
-}
-
-/* ソートボタンのホバー時のスタイル変更 */
-#sortButton:hover {
-    background-color: #bbb; /* ホバー時の背景色 */
+    background-color: #ccc;
+    color: #555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* マージンを追加して余白を調整 */
 }
 
 /* 追加ボタンのスタイル */
 #addButton {
-    background-color: #4CAF50; /* ボタンの背景色 */
-    color: #fff; /* テキストの色 */
-    border: none; /* ボーダーなし */
-    padding: 10px 20px; /* ボタンの内側の余白 */
-    border-radius: 5px; /* ボタンの角の丸み */
-    cursor: pointer; /* ポインターの形状を指定 */
-    font-size: 14px; /* フォントサイズ */
-    font-weight: bold; /* フォントの太さ */
-    transition: background-color 0.3s ease; /* ホバー時のトランジション効果 */
-}
-
-/* 追加ボタンのホバー時のスタイル変更 */
-#addButton:hover {
-    background-color: #45a049; /* ホバー時の背景色 */
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* マージンを追加して余白を調整 */
 }
 
 /* 入力欄のスタイル */
 .add-todo-form {
-    display: flex; /* フレックスコンテナ */
-    align-items: center; /* コンテンツを中央に配置 */
+    display: flex;
+    flex-direction: column; /* スマートフォンでは縦に配置 */
+    align-items: center;
 }
 
 .add-todo-form input {
-    padding: 10px; /* 入力欄の内側の余白 */
-    border: 1px solid #ccc; /* 入力欄のボーダー */
-    border-radius: 5px; /* 入力欄の角の丸み */
-    margin-right: 10px; /* 右側のマージン */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px; /* マージンを追加して余白を調整 */
 }
 
 /* 入力欄の追加ボタンのスタイル */
 .add-todo-form button {
-    background-color: #4CAF50; /* ボタンの背景色 */
-    color: #fff; /* テキストの色 */
-    border: none; /* ボーダーなし */
-    padding: 10px 20px; /* ボタンの内側の余白 */
-    border-radius: 5px; /* ボタンの角の丸み */
-    cursor: pointer; /* ポインターの形状を指定 */
-    font-size: 14px; /* フォントサイズ */
-    font-weight: bold; /* フォントの太さ */
-    transition: background-color 0.3s ease; /* ホバー時のトランジション効果 */
-}
-
-/* 入力欄の追加ボタンのホバー時のスタイル変更 */
-.add-todo-form button:hover {
-    background-color: #45a049; /* ホバー時の背景色 */
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* マージンを追加して余白を調整 */
 }
 
 /* .sortable-item に関するスタイル */
 .sortable-item {
-    position: relative; /* 相対位置指定 */
+    position: relative;
     border: 1px solid #eee;
     padding: 15px;
     margin: 10px 0;
@@ -161,4 +150,18 @@ body {
 /* デリートボタンのホバー時のスタイル変更 */
 .sortable-item .actions .delete-button:hover {
     background-color: #ff6666;
+}
+
+/* スマートフォン用のメディアクエリ */
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 10px;
+    }
+
+    #sortButton,
+    #addButton,
+    .add-todo-form input,
+    .add-todo-form button {
+        width: 100%; /* ボタンと入力欄を横幅100%に調整 */
+    }
 }
